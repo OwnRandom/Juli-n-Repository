@@ -1,0 +1,7 @@
+funcionalidad
+estructura y organizacion
+uso de buenas practicas y comentarios
+control de variables y validacion de datos
+gestion de excepciones
+eficiencia y optimizacion
+prueba de todos los casos de usos
