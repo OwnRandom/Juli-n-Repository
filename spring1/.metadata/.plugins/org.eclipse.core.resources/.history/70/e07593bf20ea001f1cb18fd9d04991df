@@ -1,0 +1,14 @@
+package ceu.proyecto.fct.model;
+
+
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+@Entity
+public class Mentor extends PersonProfile{
+
+    private boolean active;
+	
+}

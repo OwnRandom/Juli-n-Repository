@@ -1,0 +1,8 @@
+package ceu.proyecto.fct.model;
+
+public class Mentor {
+
+	private String fullName;
+    private boolean isActive;
+	
+}

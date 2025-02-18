@@ -1,0 +1,5 @@
+package ceu.proyecto.fct.repository;
+
+public interface CompanyRepository {
+
+}

@@ -1,0 +1,5 @@
+package ceu.dam.ad.libros.service;
+
+public class AutoresServiceImp extends Autores{
+
+}

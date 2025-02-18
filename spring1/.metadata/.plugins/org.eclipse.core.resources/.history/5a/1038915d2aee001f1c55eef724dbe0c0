@@ -1,0 +1,23 @@
+package ceu.dam.ad.libros.api;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import ceu.dam.ad.libros.model.Autor;
+import ceu.dam.ad.libros.service.AutoresServiceImp;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
+@RestController
+@SecurityRequirement(name = "Authorization")
+public class ActorServiceApi {
+
+	@Autowired
+	private AutoresServiceImp service;
+	
+	public void name(List<Autor> autores) {
+		
+	}
+	
+}

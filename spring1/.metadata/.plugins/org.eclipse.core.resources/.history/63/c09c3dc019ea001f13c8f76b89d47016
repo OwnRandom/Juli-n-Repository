@@ -1,0 +1,9 @@
+package ceu.proyecto.fct.model;
+
+public class PersonProfile {
+
+	public PersonProfile() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,50 @@
+package ceu.proyecto.fct.service;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.UUID;
+
+import ceu.proyecto.fct.model.PracticeRecord;
+import ceu.proyecto.fct.model.User;
+
+
+public class ServiceImp implements Service{
+
+	@Override
+	public User login(String username, String pass) throws UserException, WrongUserException, IncorrectDateException {
+		
+		return null;
+	}
+
+	@Override
+	public User changePasword(String newPass, User user) throws UserException {
+		
+		return null;
+	}
+
+	@Override
+	public User showUser(User user) throws UserException {
+		
+		return null;
+	}
+
+	@Override
+	public List<PracticeRecord> consultAllRecords(User user, LocalDate date1, LocalDate date2, String stateDate)
+			throws UserException {
+		
+		return null;
+	}
+
+	@Override
+	public void deleteRecord(UUID idRecord) throws UserException {
+		
+		
+	}
+
+	@Override
+	public void createRecord(PracticeRecord record) throws UserException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

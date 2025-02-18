@@ -1,0 +1,9 @@
+package ceu.proyecto.fct.model;
+
+public class Company {
+    private String name;
+    private String mentorName;
+    private String mentorEmail;
+    private String mentorPhone;
+    private boolean isActive;
+}

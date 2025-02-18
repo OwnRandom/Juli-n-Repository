@@ -1,0 +1,5 @@
+package ceu.dam.ad.libros.api.filters;
+
+public class AutorNotFoundExceptionHandler {
+
+}

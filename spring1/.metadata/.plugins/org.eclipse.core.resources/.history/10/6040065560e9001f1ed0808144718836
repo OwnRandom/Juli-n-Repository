@@ -1,0 +1,9 @@
+package ceu.proyecto.fct.model;
+
+import ceu.proyecto.fct.model.num.Evaluation;
+
+public class Date {
+    private String date;
+    private int courseYear;
+    private Evaluation evaluation;
+}

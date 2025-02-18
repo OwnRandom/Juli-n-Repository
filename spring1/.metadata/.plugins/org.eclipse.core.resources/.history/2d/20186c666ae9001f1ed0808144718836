@@ -1,0 +1,5 @@
+package ceu.proyecto.fct.service;
+
+public interface Service {
+
+}

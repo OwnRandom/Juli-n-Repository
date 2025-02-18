@@ -1,0 +1,109 @@
+package ceu.proyecto.fct.service;
+
+import java.sql.Date;
+import java.util.List;
+
+import ceu.proyecto.fct.model.Student;
+import ceu.proyecto.fct.model.User;
+
+public interface Service {
+
+	/**
+     * Inicia sesión con un nombre de usuario y una contraseña.
+     * La contraseña debe viajar cifrada con un algoritmo HASH.
+     * Se verifica que el usuario esté asociado a un alumno y que esté activo.
+     * Solo los usuarios activos pueden iniciar sesión.
+     *
+     * @param nombreUsuario El nombre de usuario.
+     * @param contrasenaHash La contraseña cifrada en formato HASH.
+     * @return User El usuario con el que se ha registrado
+     */
+    public User login(String username, String passwordHash);
+
+    /**
+     * Cambia la contraseña del usuario que ha iniciado sesión.
+     * La nueva contraseña debe tener al menos 8 caracteres.
+     *
+     * @param usuario El usuario que quiere cambiar su contraseña.
+     * @param contrasenaAntigua La contraseña actual del usuario.
+     * @param contrasenaNueva La nueva contraseña que se desea establecer.
+     * @return true si la contraseña se cambió con éxito, false en caso contrario.
+     */
+    public void changePassword(User user, String oldPassword, String newPassword);
+
+    /**
+     * Obtiene los datos del usuario sin posibilidad de edición.
+     * Muestra todos los datos del alumno, incluyendo sus registros de prácticas,
+     * pero sin mostrar el teléfono ni el correo del tutor laboral.
+     *
+     * @param usuario El usuario que solicita sus datos.
+     * @return Un objeto con los datos del usuario.
+     */
+    public User viewUserData(User user);
+
+    /**
+     * Obtiene el resumen de las prácticas del usuario.
+     * El resumen incluye:
+     * - Cantidad total de horas que hay que realizar.
+     * - Cantidad total de horas realizadas (y porcentaje del total).
+     * - Cantidad total de horas pendientes.
+     *
+     * @param alumno El alumno del que se quiere obtener el resumen.
+     * @return Un objeto con el resumen de prácticas.
+     */
+    //public PracticeSummary getPracticeSummary(Student student);
+
+    /**
+     * Consulta los registros de prácticas del usuario en una tabla.
+     * Muestra todas las fechas del curso y evaluación del usuario, diferenciando 
+     * visualmente aquellas con registros asociados de las que no los tienen.
+     * 
+     * Permite filtrar por:
+     * - Fecha desde y fecha hasta.
+     * - Tipo de fechas a mostrar (completadas, sin completar, todas).
+     *
+     * @param alumno El alumno cuyos registros se consultarán.
+     * @param fechaDesde Fecha de inicio del filtro (opcional).
+     * @param fechaHasta Fecha de fin del filtro (opcional).
+     * @param tipoFiltro Tipo de fechas a mostrar (completadas, sin completar, todas).
+     * @return Lista de registros de prácticas en formato tabla.
+     */
+    public List<PracticeRecord> getPracticeRecords(Student student, String startDate, String endDate, FilterType filterType);
+
+    /**
+     * Obtiene el detalle completo de un registro de práctica específico.
+     * Desde esta pantalla, se podrá eliminar el registro, pero no editarlo.
+     *
+     * @param registro El registro de práctica seleccionado.
+     * @return El detalle completo del registro de práctica.
+     */
+   // public PracticeRecord viewPracticeRecordDetails(PracticeRecord record);
+
+    /**
+     * Elimina un registro de práctica.
+     * Luego de eliminar, se debe redirigir a la pantalla de consulta de registros.
+     *
+     * @param registro El registro de práctica a eliminar.
+     * @return true si el registro se eliminó con éxito, false en caso contrario.
+     */
+    //public boolean deletePracticeRecord(PracticeRecord record);
+
+    /**
+     * Permite registrar una nueva práctica para el usuario.
+     * Se debe seleccionar una fecha disponible en un desplegable y cumplir con las restricciones:
+     * - La cantidad de horas debe ser un número decimal con saltos de 0.5.
+     * - Debe ser mayor a 0 y menor o igual a 8.
+     * - El detalle debe ser un texto largo describiendo la práctica.
+     *
+     * @param alumno El alumno que quiere registrar la práctica.
+     * @param fechaSeleccionada La fecha en la que se realizó la práctica.
+     * @param horasCantidad La cantidad de horas trabajadas.
+     * @param detalle Descripción de las actividades realizadas.
+     * @return true si el registro fue exitoso, false en caso contrario.
+     */
+    public boolean registerPractice(Student student, Date selectedDate, double hours, String details);
+
+
+}
+
+

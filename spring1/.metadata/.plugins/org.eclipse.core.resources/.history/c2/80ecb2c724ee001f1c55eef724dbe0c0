@@ -1,0 +1,5 @@
+package ceu.dam.ad.libros.repository;
+
+public interface AutorRepository {
+
+}

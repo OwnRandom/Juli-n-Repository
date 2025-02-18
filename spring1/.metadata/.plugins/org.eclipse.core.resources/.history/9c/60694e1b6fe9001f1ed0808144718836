@@ -1,0 +1,110 @@
+package ceu.proyecto.fct.service;
+
+import java.sql.Date;
+import java.util.List;
+
+import ceu.proyecto.fct.model.Student;
+import ceu.proyecto.fct.model.User;
+
+public interface Service {
+
+    /**
+     * Logs in with a username and password.
+     * The password must be sent hashed using a HASH algorithm.
+     * It verifies that the user is associated with a student and is active.
+     * Only active users can log in.
+     *
+     * @param username The username.
+     * @param passwordHash The hashed password.
+     * @return true if login is successful, false otherwise.
+     */
+    public User login(String username, String passwordHash);
+
+    /**
+     * Changes the password of the logged-in user.
+     * The new password must be at least 8 characters long.
+     *
+     * @param user The user who wants to change their password.
+     * @param oldPassword The current password.
+     * @param newPassword The new password to be set.
+     * @return true if the password was changed successfully, false otherwise.
+     */
+    public void changePassword(User user, String oldPassword, String newPassword);
+
+    /**
+     * Retrieves the user data without the possibility of editing.
+     * It displays all student data, including their practice records,
+     * but does not show the tutor's phone number or email.
+     *
+     * @param user The user requesting their data.
+     * @return An object containing the user's data.
+     */
+    public User viewUserData(User user);
+
+    /**
+     * Retrieves the student's practice summary.
+     * The summary includes:
+     * - Total number of hours required.
+     * - Total number of completed hours (and percentage of completion).
+     * - Total number of pending hours.
+     *
+     * @param student The student whose summary is requested.
+     * @return An object containing the practice summary.
+     */
+    public PracticeSummary getPracticeSummary(Student student);
+
+    /**
+     * Queries the user's practice records in a table format.
+     * Displays all the course and evaluation dates, visually differentiating
+     * those with associated records from those without.
+     *
+     * Filters include:
+     * - Start date and end date.
+     * - Date type filter (completed, pending, all).
+     *
+     * @param student The student whose records will be queried.
+     * @param startDate The start date filter (optional).
+     * @param endDate The end date filter (optional).
+     * @param filterType The type of dates to display (completed, pending, all).
+     * @return A list of practice records in table format.
+     */
+    public List<PracticeRecord> getPracticeRecords(Student student, String startDate, String endDate, FilterType filterType);
+
+    /**
+     * Retrieves the full details of a specific practice record.
+     * From this screen, the record can be deleted but not edited.
+     *
+     * @param record The selected practice record.
+     * @return The full details of the practice record.
+     */
+    public PracticeRecord viewPracticeRecordDetails(PracticeRecord record);
+
+    /**
+     * Deletes a practice record.
+     * After deletion, the user should be redirected back to the records table.
+     *
+     * @param record The practice record to be deleted.
+     * @return true if the record was successfully deleted, false otherwise.
+     */
+    public boolean deletePracticeRecord(PracticeRecord record);
+
+    /**
+     * Allows a student to register a new practice session.
+     * A date must be selected from a dropdown containing only available dates.
+     * Restrictions:
+     * - The number of hours must be a decimal with steps of 0.5.
+     * - Must be greater than 0 and less than or equal to 8.
+     * - The description must be a detailed text.
+     *
+     * @param student The student registering the practice.
+     * @param selectedDate The selected date for the practice.
+     * @param hours The number of hours worked.
+     * @param details A detailed description of the work performed.
+     * @return true if the record was successfully created, false otherwise.
+     */
+    public boolean registerPractice(Student student, Date selectedDate, double hours, String details);
+
+
+}
+
+

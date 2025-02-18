@@ -1,0 +1,9 @@
+package ceu.proyecto.fct.model;
+
+public class PracticeRecord {
+	
+	private String associatedStudent;
+    private String associatedDate;
+    private int hoursWorked;
+    private String description;
+}

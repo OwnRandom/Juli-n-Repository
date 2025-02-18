@@ -1,0 +1,17 @@
+package ceu.dam.ad.libros.api.handlers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import ceu.dam.ad.libros.service.AutorServiceException;
+
+@ControllerAdvice
+public class AutorServiceExceptionHandler {
+
+	@ExceptionHandler(AutorServiceException.class)
+	public ResponseEntity<String> handle(AutorServiceException e){
+		return ResponseEntity.internalServerError().body(e.getMessage());
+	}
+	
+}

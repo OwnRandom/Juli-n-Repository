@@ -1,0 +1,36 @@
+package ceu.dam.ad.libros.api;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import ceu.dam.ad.libros.model.Autor;
+import ceu.dam.ad.libros.service.AutorNotFoundException;
+import ceu.dam.ad.libros.service.AutorServiceException;
+import ceu.dam.ad.libros.service.AutoresServiceImp;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.validation.Valid;
+
+@RestController
+@SecurityRequirement(name = "Authorization")
+public class ActorServiceApi {
+
+	@Autowired
+	private AutoresServiceImp service;
+	
+	@PostMapping
+	public void guardarAutores(@Valid @RequestBody List<Autor> autores) throws AutorServiceException {
+		service.guardarAutores(autores);
+	}
+	
+	@GetMapping("/autores/{id}")
+	public Autor consultar(@PathVariable Long id) throws AutorNotFoundException, AutorServiceException {
+		return service.consultarAutor(id);
+	}
+	
+}

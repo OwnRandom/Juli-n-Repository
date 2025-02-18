@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\jatalaya6804\Desktop\ProyectoFCT\Proyecto-FCT\ProyectoFCT"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Repositorio julian\Juli-n-Repository\spring\pedidos-mongo-api-server-solucion"/>
+			<item value="C:\Users\jatalaya6804\Desktop\RepositorioAcceso\_acceso_datos\ejercicios-tema3-avanzados-solucion"/>
+			<item value="C:\Users\jatalaya6804\Desktop\RepositorioAcceso"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Repositorio julian\Juli-n-Repository\spring\user-api-server-solucion"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Acceso a datos\_acceso_datos\ejercicios-tema3-avanzados-solucion"/>
+			<item value="C:\Users\jatalaya6804\Desktop\userapi\cochecliente\user-api-client"/>
+			<item value="C:\Users\jatalaya6804\Desktop\userapi\users-api-client"/>
+			<item value="C:\Users\jatalaya6804\Desktop\userapi\user-api-client"/>
+			<item value="C:\Users\jatalaya6804\Desktop\cliente\java-client-generated"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Acceso a datos\_acceso_datos\user-api-server"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Acceso a datos\_acceso_datos\ejercicios-tema3-avanzados"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Git Casa\spring\Ejercicios\_acceso_datos\ejercicios-tema3-basicos"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Git Casa\spring\Ejercicios"/>
+			<item value="C:\Users\jatalaya6804\Desktop\Git Casa\spring\ejemplo-spring-data"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="pedidos-mongo-ui-cliente"/>
+		</list>
+		<list key="name">
+			<item value="pedidos-mongo-ui-cliente"/>
+		</list>
+		<list key="artifactId">
+			<item value="pedidos-mongo-ui-cliente"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,14 @@
+package ceu.proyecto.fct.model;
+
+public class Student {
+    private String fullName;
+    private String cycle;
+    private Evaluation evaluation;
+    private int courseYear;
+    private String assignedTeacherTutor;
+    private String assignedCompany;
+
+    public enum Evaluation {
+        SEPTIEMBRE, MARZO
+    }
+}

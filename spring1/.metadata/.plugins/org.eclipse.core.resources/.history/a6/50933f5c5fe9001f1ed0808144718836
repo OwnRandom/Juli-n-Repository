@@ -1,0 +1,7 @@
+package ceu.proyecto.fct.model;
+
+public enum Perfil {
+
+	MENTOR,
+	STUDENT
+}

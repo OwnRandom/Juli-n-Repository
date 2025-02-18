@@ -1,0 +1,13 @@
+package ceu.proyecto.fct.model;
+
+import ceu.proyecto.fct.model.num.Course;
+import ceu.proyecto.fct.model.num.Evaluation;
+
+public class Student {
+    private String fullName;
+    private Course course;
+    private Evaluation evaluation;
+    private int courseYear;
+    private String mentor;
+    private String company;
+}

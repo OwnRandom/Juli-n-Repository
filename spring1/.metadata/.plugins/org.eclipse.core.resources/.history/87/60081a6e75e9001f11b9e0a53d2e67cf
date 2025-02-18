@@ -1,0 +1,18 @@
+package ceu.proyecto.fct.model;
+
+import java.time.LocalDate;
+import java.util.UUID;
+
+import ceu.proyecto.fct.model.num.Evaluation;
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+@Entity
+public class Date {
+	
+	private UUID id;
+    private LocalDate date;
+    private int courseYear;
+    private Evaluation evaluation;
+}

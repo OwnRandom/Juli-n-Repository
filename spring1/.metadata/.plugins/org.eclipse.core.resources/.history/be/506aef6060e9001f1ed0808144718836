@@ -1,0 +1,12 @@
+package ceu.proyecto.fct.model;
+
+import ceu.proyecto.fct.model.num.Perfil;
+
+public class User {
+    private String username;
+    private String password;
+    private Perfil profile;
+    private Long idassociatedPerson;
+    private boolean isActive;
+
+}
